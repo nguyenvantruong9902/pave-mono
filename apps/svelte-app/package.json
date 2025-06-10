@@ -1,0 +1,29 @@
+{
+  "name": "@pave/svelte-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "clean": "rm -rf dist .cache .turbo",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "svelte": "^5.28.1",
+    "svelte-check": "^4.1.6",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@pave/web-components": "workspace:^",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "svelte-preprocess-react": "^2.1.0"
+  }
+}

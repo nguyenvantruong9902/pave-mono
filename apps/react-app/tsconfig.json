@@ -1,0 +1,5 @@
+{
+  "extends": "@pave/tools/typescript-config/react.json",
+
+  "include": ["src"]
+}
