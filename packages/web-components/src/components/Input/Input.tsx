@@ -1,14 +1,33 @@
+import { useState } from "react";
+
 import { cn } from "@/utils";
 
-import { input__base } from "./input.module.scss";
-import type { InputProps } from "./types";
+import type { InputProps, InputStatus } from "./types";
 
 const Input: React.FC<InputProps> = ({ className, ...props }) => {
-  return (
-    <div>
-      <input className={cn([input__base, className])} {...props} />
+  const [status, setStatus] = useState<InputStatus>();
 
-      <input type="checkbox" />
+  return (
+    <div className="w-fit">
+      <input
+        className={cn(
+          "h-10 min-w-[26.75rem] px-3 py-2 rounded-lg bg-gray-base border border-gray focus-within:outline-gray",
+          {
+            [`border-${status}`]: status,
+            [`focus-within:outline-${status}`]: status,
+          },
+          className
+        )}
+        {...props}
+      />
+
+      <div className="flex justify-between">
+        <input type="checkbox" />
+
+        <div>
+          <span>History</span>
+        </div>
+      </div>
     </div>
   );
 };

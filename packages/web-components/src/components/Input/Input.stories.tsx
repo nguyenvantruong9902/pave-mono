@@ -16,6 +16,6 @@ type Story = StoryFn<typeof meta>;
 
 export const Default: Story = () => (
   <div className="flex w-5xl h-[500px] flex-col gap-y-6">
-    <Input type="search" />
+    <Input />
   </div>
 );
