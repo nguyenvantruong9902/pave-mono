@@ -14,8 +14,20 @@ export default meta;
 
 type Story = StoryFn<typeof meta>;
 
+const helpText = "You can set help text here";
+
 export const Default: Story = () => (
-  <div className="flex w-5xl h-[500px] flex-col gap-y-6">
-    <Input />
+  <div className="flex flex-wrap gap-6">
+    <Input placeholder="Default" />
+
+    <Input disabled placeholder="Disabled" />
+
+    <Input status="info" placeholder="Info" help={helpText} />
+
+    <Input status="warning" placeholder="Warning" help={helpText} />
+
+    <Input status="success" placeholder="Success" help={helpText} />
+
+    <Input status="error" placeholder="Error" help={helpText} />
   </div>
 );

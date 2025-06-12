@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:css": "tailwindcss -o dist/web-components.css --minify",
+    "build:css": "tailwindcss -i ./src/styles/base.css -o dist/web-components.css --minify",
     "build": "run build:css && tsc -b && vite build",
     "clean": "rm -rf dist .cache .turbo",
     "lint": "eslint .",
@@ -44,6 +44,7 @@
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@pave/tools": "workspace:^",
+    "@storybook/addon-docs": "^9.0.8",
     "@storybook/react-vite": "9.0.8",
     "@tailwindcss/cli": "^4.1.9",
     "@tailwindcss/vite": "^4.1.8",
