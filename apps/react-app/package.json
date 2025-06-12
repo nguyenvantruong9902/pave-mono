@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pave/tools": "workspace:^",
     "@pave/web-components": "workspace:^",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

@@ -32,7 +32,7 @@ No build step required - configs are plain files
 ### 1. Add as a dependency
 
 ```bash
-yarn workspace [your-app-or-package] add tools
+yarn workspace [your-app-or-package] add @pave/tools
 ```
 
 ### 2. Import shared configs

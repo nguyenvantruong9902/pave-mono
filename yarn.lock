@@ -921,6 +921,7 @@ __metadata:
   resolution: "@pave/react-app@workspace:apps/react-app"
   dependencies:
     "@eslint/js": "npm:^9.25.0"
+    "@pave/tools": "workspace:^"
     "@pave/web-components": "workspace:^"
     "@types/react": "npm:^19.1.2"
     "@types/react-dom": "npm:^19.1.2"
