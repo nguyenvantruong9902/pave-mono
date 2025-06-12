@@ -1,10 +1,12 @@
 import { Input, type InputStatus } from "@pave/web-components";
 import { useState } from "react";
 
+import "./app.css";
+
 const helpText = "You can set help text here";
 
 const passwordRegex = {
-  onlyNumber: /[0-9]/,
+  onlyNumber: /\d/,
   onlyLowercase: /[a-z]/,
   onlyUppercase: /[A-Z]/,
   onlySpecial: /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/,
@@ -84,37 +86,66 @@ function App() {
   const handleDebounceChange = debounce(onChangeTesting, 500);
 
   return (
-    <div className="flex flex-wrap gap-6">
-      <Input placeholder="Default" />
+    <div className="app">
+      <div className="container">
+        <Input label="Default" placeholder="Default" />
 
-      <Input disabled placeholder="Disabled" />
+        <Input
+          readOnly
+          name="readonly"
+          label="Readonly"
+          placeholder="Readonly"
+        />
 
-      <Input status="info" name="info" placeholder="Info" help={helpText} />
+        <Input
+          disabled
+          name="disabled"
+          label="Disabled"
+          placeholder="Disabled"
+        />
 
-      <Input
-        status="warning"
-        name="warning"
-        placeholder="Warning"
-        help={helpText}
-      />
+        <Input
+          status="info"
+          name="info"
+          label="Info"
+          placeholder="Info"
+          help={helpText}
+        />
 
-      <Input
-        status="success"
-        name="success"
-        placeholder="Success"
-        help={helpText}
-      />
+        <Input
+          status="warning"
+          name="warning"
+          label="Warning"
+          placeholder="Warning"
+          help={helpText}
+        />
 
-      <Input status="error" name="error" placeholder="Error" help={helpText} />
+        <Input
+          status="success"
+          name="success"
+          label="Success"
+          placeholder="Success"
+          help={helpText}
+        />
 
-      <Input
-        type="password"
-        placeholder="For Testing"
-        status={status}
-        name="testing"
-        help={help}
-        onChange={handleDebounceChange}
-      />
+        <Input
+          status="error"
+          name="error"
+          label="Error"
+          placeholder="Error"
+          help={helpText}
+        />
+
+        <Input
+          type="password"
+          label="Password"
+          placeholder="Enter your password"
+          status={status}
+          name="testing"
+          help={help}
+          onChange={handleDebounceChange}
+        />
+      </div>
     </div>
   );
 }

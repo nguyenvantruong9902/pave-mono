@@ -1,1 +1,8 @@
 @import "./tailwind.css";
+@import "../assets/JetBrainsMono/stylesheet.css";
+
+*,
+*::before,
+*::after {
+  @apply font-jetbrains font-medium;
+}

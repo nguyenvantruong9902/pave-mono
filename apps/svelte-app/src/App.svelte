@@ -2,6 +2,8 @@
   import { Input, type InputStatus } from "@pave/web-components";
   import { sveltify } from "svelte-preprocess-react";
 
+  import "./app.css";
+
   const react = sveltify({ Input });
 
   const helpText = "You can set help text here";
@@ -59,39 +61,63 @@
   const handleDebounceChange = debounce(onChangeTesting, 500);
 </script>
 
-<div class="flex flex-wrap gap-6">
-  <react.Input placeholder="Default" />
+<div class="app">
+  <div class="container">
+    <react.Input label="Default" placeholder="Default" />
 
-  <react.Input disabled placeholder="Disabled" />
+    <react.Input
+      readOnly
+      name="readonly"
+      label="Readonly"
+      placeholder="Readonly"
+    />
 
-  <react.Input status="info" name="info" placeholder="Info" help={helpText} />
+    <react.Input
+      disabled
+      name="disabled"
+      label="Disabled"
+      placeholder="Disabled"
+    />
 
-  <react.Input
-    status="warning"
-    name="warning"
-    placeholder="Warning"
-    help={helpText}
-  />
+    <react.Input
+      status="info"
+      name="info"
+      label="Info"
+      placeholder="Info"
+      help={helpText}
+    />
 
-  <react.Input
-    status="success"
-    name="success"
-    placeholder="Success"
-    help={helpText}
-  />
+    <react.Input
+      status="warning"
+      name="warning"
+      label="Warning"
+      placeholder="Warning"
+      help={helpText}
+    />
 
-  <react.Input
-    status="error"
-    name="error"
-    placeholder="Error"
-    help={helpText}
-  />
+    <react.Input
+      status="success"
+      name="success"
+      label="Success"
+      placeholder="Success"
+      help={helpText}
+    />
 
-  <react.Input
-    placeholder="For Testing"
-    {status}
-    name="testing"
-    {help}
-    onChange={handleDebounceChange}
-  />
+    <react.Input
+      status="error"
+      name="error"
+      label="Error"
+      placeholder="Error"
+      help={helpText}
+    />
+
+    <react.Input
+      {status}
+      name="testing"
+      label="Email"
+      placeholder="Enter your email"
+      {help}
+      onChange={handleDebounceChange}
+    />
+  </div>
 </div>

@@ -18,16 +18,28 @@ const helpText = "You can set help text here";
 
 export const Default: Story = () => (
   <div className="flex flex-wrap gap-6">
-    <Input placeholder="Default" />
+    <Input label="Default" placeholder="Default" />
 
-    <Input disabled placeholder="Disabled" />
+    <Input readOnly label="Readonly" placeholder="Readonly" />
 
-    <Input status="info" placeholder="Info" help={helpText} />
+    <Input disabled label="Disabled" placeholder="Disabled" />
 
-    <Input status="warning" placeholder="Warning" help={helpText} />
+    <Input status="info" label="Info" placeholder="Info" help={helpText} />
 
-    <Input status="success" placeholder="Success" help={helpText} />
+    <Input
+      status="warning"
+      label="Warning"
+      placeholder="Warning"
+      help={helpText}
+    />
 
-    <Input status="error" placeholder="Error" help={helpText} />
+    <Input
+      status="success"
+      label="Success"
+      placeholder="Success"
+      help={helpText}
+    />
+
+    <Input status="error" label="Error" placeholder="Error" help={helpText} />
   </div>
 );

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @theme {
+  --font-jetbrains: "JetBrains Mono", monospace;
+
+  --text-md: 0.9375rem;
+
   --color-dark: #1f2937;
 
   --color-primary: #1a58d2;

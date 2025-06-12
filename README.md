@@ -1,84 +1,93 @@
-# Turborepo starter
+# 🧩 PAVE Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
+This is a **Turborepo** monorepo using **Yarn v4.9.2** and **Node.js 22+**, containing multiple frontend applications and shared packages. It’s designed for scalable and maintainable development using React, Svelte, and Web Components.
 
-## Using this example
+---
 
-Run the following command:
+## 📁 Directory Structure
 
-```sh
-npx create-turbo@latest
+├── apps
+│ ├── react-app # React application
+│ └── svelte-app # Svelte application
+│
+├── packages
+│ ├── tools # Shared configurations and utilities
+│ └── web-components # Framework-agnostic Web Components
+│
+├── .gitignore
+├── turbo.json # Turborepo pipeline config
+├── yarn.lock
+└── README.md
+
+---
+
+## 📦 Workspaces Overview
+
+| Path                      | Type    | Description                 |
+| ------------------------- | ------- | --------------------------- |
+| `apps/react-app`          | App     | React frontend application  |
+| `apps/svelte-app`         | App     | Svelte frontend application |
+| `packages/web-components` | Package | Reusable web components     |
+| `packages/tools`          | Package | Shared tooling & configs    |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Turborepo** – High-performance monorepo tool
+- **Yarn 4.9.2 (Berry)** – Fast, modern dependency management
+- **Node.js v22+**
+- **React** – `apps/react-app`
+- **Svelte** – `apps/svelte-app`
+- **Web Components** – `packages/web-components` (e.g., Lit/Stencil)
+- **Shared Tools** – Linters, configs in `packages/tools`
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js 22+](https://nodejs.org/)
+- [Yarn 4.9.2+](https://yarnpkg.com/)
+
+### Installation
+
+```bash
+yarn install
 ```
 
-## What's inside?
+### Development
 
-This Turborepo includes the following packages/apps:
+Run all apps
 
-### Apps and Packages
+```bash
+yarn dev
+```
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+Run specific apps
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+```bash
+yarn dev:react-app
+yarn dev:svelte-app
+```
 
 ### Build
 
-To build all apps and packages, run the following command:
+Build all apps
 
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+```bash
+yarn build
 ```
 
-### Remote Caching
+Build web components
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```bash
+yarn build:web-components
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Clean
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
+```bash
+yarn clean
 ```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)

@@ -8,6 +8,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo check-types",
+    "build:web-components": "turbo build --filter=@pave/web-components",
     "dev:react-app": "turbo dev --filter=@pave/react-app",
     "dev:svelte-app": "turbo dev --filter=@pave/svelte-app"
   },
