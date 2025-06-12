@@ -6,7 +6,8 @@ This is a **Turborepo** monorepo using **Yarn v4.9.2** and **Node.js 22+**, cont
 
 ## 📁 Directory Structure
 
-.
+```text
+/
 ├── apps
 │ ├── react-app # React application
 │ └── svelte-app # Svelte application
@@ -19,6 +20,7 @@ This is a **Turborepo** monorepo using **Yarn v4.9.2** and **Node.js 22+**, cont
 ├── turbo.json # Turborepo pipeline config
 ├── yarn.lock
 └── README.md
+```
 
 ---
 
