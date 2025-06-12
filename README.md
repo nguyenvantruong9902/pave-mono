@@ -42,7 +42,7 @@ This is a **Turborepo** monorepo using **Yarn v4.9.2** and **Node.js 22+**, cont
 - **Node.js v22+**
 - **React** – `apps/react-app`
 - **Svelte** – `apps/svelte-app`
-- **Web Components** – `packages/web-components` (e.g., Lit/Stencil)
+- **Web Components** – `packages/web-components`
 - **Shared Tools** – Linters, configs in `packages/tools`
 
 ---
