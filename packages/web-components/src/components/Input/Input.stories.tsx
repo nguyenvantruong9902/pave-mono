@@ -19,6 +19,7 @@ const meta = {
   args: {
     label: "Label",
     name: "input",
+    placeholder: "Placeholder",
     help: helpText,
     status: undefined,
     disabled: false,
