@@ -39,7 +39,7 @@ yarn workspace [your-app-or-package] add @pave/tools
 
 ```js
 // eslint.config.js
-import { config } from "@pave/tools/eslint-config/base";
+import baseConfig from "@pave/tools/eslint-config/base";
 
 // tsconfig.json
 "extends": "@pave/tools/typescript-config/react.json"

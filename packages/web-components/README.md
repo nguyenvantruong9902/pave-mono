@@ -41,6 +41,17 @@ import { Input } from "@pave/web-components";
 
 ### 3. Use
 
+React
+
 ```tsx
 <Input {...props} />
+```
+
+Svelte
+
+You can use the `sveltify` function from the `svelte-preprocess-react` package to convert React components to Svelte components.
+
+```tsx
+const react = sveltify({ Input });
+<react.Input {...props} />;
 ```

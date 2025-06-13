@@ -1,45 +1,39 @@
 import { type Meta, type StoryFn } from "@storybook/react";
 
 import Input from "./Input.tsx";
+import type { InputProps } from "./types.ts";
+
+const helpText = "You can set help text here";
 
 const meta = {
   title: "Input",
   component: Input,
   parameters: {},
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    status: {
+      options: ["info", "warning", "error", "success"],
+      control: "select",
+    },
+  },
+  args: {
+    label: "Label",
+    name: "input",
+    help: helpText,
+    status: undefined,
+    disabled: false,
+    readOnly: false,
+  },
 } satisfies Meta<typeof Input>;
 
 export default meta;
 
 type Story = StoryFn<typeof meta>;
 
-const helpText = "You can set help text here";
-
-export const Default: Story = () => (
+export const Default: Story = (props: InputProps) => (
   <div className="flex flex-wrap gap-6">
-    <Input label="Default" placeholder="Default" />
+    <Input {...props} />
 
-    <Input readOnly label="Readonly" placeholder="Readonly" />
-
-    <Input disabled label="Disabled" placeholder="Disabled" />
-
-    <Input status="info" label="Info" placeholder="Info" help={helpText} />
-
-    <Input
-      status="warning"
-      label="Warning"
-      placeholder="Warning"
-      help={helpText}
-    />
-
-    <Input
-      status="success"
-      label="Success"
-      placeholder="Success"
-      help={helpText}
-    />
-
-    <Input status="error" label="Error" placeholder="Error" help={helpText} />
+    <Input {...props} />
   </div>
 );
