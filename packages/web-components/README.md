@@ -55,3 +55,19 @@ You can use the `sveltify` function from the `svelte-preprocess-react` package t
 const react = sveltify({ Input });
 <react.Input {...props} />;
 ```
+
+---
+
+## 📘 Storybook
+
+This project uses [Storybook](https://storybook.js.org/) for building and testing UI components in isolation.
+
+### 🔧 Running Storybook Locally
+
+To start Storybook locally:
+
+```bash
+yarn storybook
+```
+
+Storybook will start at: http://localhost:6006
