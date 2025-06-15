@@ -123,6 +123,10 @@ const Input: React.FC<InputProps> = ({
               "ml-1.5 text-xs/normal text-gray-semi cursor-pointer",
               {
                 "cursor-not-allowed": disabled,
+                "text-info-semi": status === "info",
+                "text-success-semi": status === "success",
+                "text-warning-semi": status === "warning",
+                "text-error-semi": status === "error",
               }
             )}
           >
